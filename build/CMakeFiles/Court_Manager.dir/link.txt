@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Court_Manager.dir/objects.a
-C:\MinGW\bin\ar.exe qc CMakeFiles\Court_Manager.dir/objects.a @CMakeFiles\Court_Manager.dir\objects1.rsp
-C:\MinGW\bin\g++.exe  -Wall -fexec-charset=GBK -Wl,--whole-archive CMakeFiles\Court_Manager.dir/objects.a -Wl,--no-whole-archive -o Court_Manager.exe -Wl,--out-implib,libCourt_Manager.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Court_Manager.dir\linklibs.rsp

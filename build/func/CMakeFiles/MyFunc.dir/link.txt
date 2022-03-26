@@ -1,2 +1,0 @@
-C:\MinGW\bin\ar.exe qc libMyFunc.a CMakeFiles/MyFunc.dir/Court.cpp.obj CMakeFiles/MyFunc.dir/Order.cpp.obj CMakeFiles/MyFunc.dir/generateSummary.cpp.obj
-C:\MinGW\bin\ranlib.exe libMyFunc.a
