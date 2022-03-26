@@ -44,9 +44,13 @@ void Order::debug() const{
 }
 
 Order::Order(std::string id, std::string time, char place): user_id(id), order_time(time), place_number(place){
+        
         int nRet = sscanf(order_time.c_str(), "%d-%d-%d %d:00~%d:00",
                             &order_year, &order_month, &order_day, &start_time, &end_time);
         if (5 != nRet)
             throw std::runtime_error("Fail to construct new order!");
         this->week = GetDayOfWeek(order_year, order_month, order_day);
+
+        this->payment = 0.0;
+        this->cancel_flag = false;
     };

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/MyFunc.dir/includes_CXX.rsp
 
-CXX_FLAGS =  -Wall -fexec-charset=GBK -g -std=gnu++11
+CXX_FLAGS =  -Wall -fexec-charset=GBK -std=gnu++11
 

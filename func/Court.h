@@ -20,12 +20,14 @@ public:
     //根据用户id，日期，起止时间取消对应订单
     void cancelOrder(const std::string& u_id, const std::string& date, int start_time, int end_time);
 
-    //计算全部订单，把 {日期，费用}加入payments， 之后把球场的订单清空
+    //计算全部订单，更新每一笔订单的正常费用，导入orders_for_print并按时间重新排序
     void computePayment(); 
-    //把payments的信息打印出来，并返回总收入
+    //把每笔订单的费用信息打印出来，返回总收入
     double printPaymentSummary() const; 
     //计算单个订单付款
     static double computeSinglePayment(const Order&);
+    //设置优惠活动字典
+    static void addDiscount(const std::pair<std::pair<std::string, std::string>, int>&);
 
     ~Court() = default;
 
@@ -36,10 +38,8 @@ private:
 
     //日期 -> 订单 键值对，方便快速判断冲突，取消订单
     std::unordered_multimap<std::string, Order> orders; 
-    //取消订单数组
-    std::vector<Order> canceled_orders;
-    //日期+时间段 —> 金额 键值对，方便打印
-    std::multimap<std::string, double> payments; 
+    //用于按时间顺序打印信息
+    std::vector<std::pair<std::string, Order>> orders_for_print; 
 
     //收费标准，hour->pay
     static std::unordered_map<int, int> charge_week;
@@ -47,6 +47,10 @@ private:
     //罚金比例
     static double fine_rate_week;
     static double fine_rate_weekend;
+
+    // 打折优惠 <yyyy-MM-dd, yyyy-MM-dd> -> promotion rate
+    static std::map<std::pair<std::string, std::string>, int> discount_map;
+    
 };
 
 # endif

@@ -105,6 +105,11 @@ func/CMakeFiles/MyFunc.dir/generateSummary.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\ostream.tcc \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\istream.tcc \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\fstream \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\codecvt.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\basic_file.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\mingw32\bits\c++io.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\fstream.tcc \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\vector \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_construct.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_uninitialized.h \
@@ -135,4 +140,5 @@ func/CMakeFiles/MyFunc.dir/generateSummary.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\map \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_tree.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_map.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_multimap.h
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_multimap.h \
+ d:\jupyter\c++_coding\yumaoqiu02\build\config.h

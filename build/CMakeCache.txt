@@ -22,7 +22,7 @@ CMAKE_AR:FILEPATH=C:/MinGW/bin/ar.exe
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=Debug
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -101,7 +101,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/yumaoqiu
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Court_Manager
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/MinGW/bin/ld.exe
@@ -235,15 +235,6 @@ Court_Manager_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Court_Manager_SOURCE_DIR:STATIC=D:/Jupyter/c++_coding/yumaoqiu02
-
-//Value Computed by CMake
-yumaoqiu_BINARY_DIR:STATIC=D:/Jupyter/c++_coding/yumaoqiu02/build
-
-//Value Computed by CMake
-yumaoqiu_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-yumaoqiu_SOURCE_DIR:STATIC=D:/Jupyter/c++_coding/yumaoqiu02
 
 
 ########################

@@ -1,9 +1,11 @@
 # include <iostream>
+# include <fstream>
 # include <string>
 # include <vector>
 # include <algorithm>
 # include <Order.h>
 # include <Court.h>
+# include <../config.h>
 
 std::vector<char> nPlace{'A','B','C','D'};
 
@@ -117,6 +119,24 @@ void getNewOrder(const std::string& newOrder){
 
 //把4个球场的收入打印出来
 void printSummary(){
+
+    std::string discount_file_name = "discounts.txt";
+    std::string discount_line;
+
+    std::ifstream in;
+    in.open(TEXT_DIR + discount_file_name);
+
+    while(getline(in, discount_line)){
+        auto it_1 = discount_line.find(' ');
+        auto it_2 = discount_line.rfind(' ');
+        std::string start_date = discount_line.substr(0, it_1);
+        std::string end_date = discount_line.substr(it_1+1, it_2-it_1-1);
+        int discount_rate = stoi(discount_line.substr(it_2+1, 1));
+        
+        std::pair<std::string, std::string> discount_range = std::make_pair(start_date, end_date);
+        Court::addDiscount({discount_range, discount_rate});
+    }
+
     double total_pay = 0.0;
     std::cout<< "收入汇总"<<'\n'
              << "---"<< '\n'<<"场地:A"<< '\n';
